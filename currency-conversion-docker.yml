@@ -1,11 +1,9 @@
 server:
   port: 8100
 eureka:
-  instance:
-    hostname: service-registry
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:8761/eureka
+      defaultZone: http://service-registry:8761/eureka
   
